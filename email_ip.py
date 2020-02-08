@@ -15,19 +15,17 @@ while isConnected == 0:
         print("No wireless networks connected")
         isConnected = 0
 
-
-os.system("bash ./ip.sh")
+get_ip = subprocess.check_output(["hostname", "-I"])
+ip = str(get_ip).split()
+ip = ip[0]
+ip = ip[2:]
+print(ip)
 
 sender_email = "from@gmail.com"
 receiver_email = "to@gmail.com"
 password = "yourpass"
-ip = 0
-f = open("ip.txt", "r")
-for item in f:
-    ip = item
-    break
 
-message = ip.strip()
+message = ip
 port = 465  # For SSL
 # Create a secure SSL context
 context = ssl.create_default_context()
