@@ -2,11 +2,12 @@ import smtplib, ssl
 import subprocess
 import time
 import os
-ps = subprocess.Popen(['iwgetid'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 isConnected = 0
 while isConnected == 0:
-    time.sleep(1)
+    time.sleep(2)
     try:
+        print("testing IP...")
+        ps = subprocess.Popen(['iwgetid'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         output = subprocess.check_output(('grep', 'ESSID'), stdin=ps.stdout)
         print(output)
         isConnected = 1
