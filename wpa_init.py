@@ -1,8 +1,7 @@
 import subprocess
-
-subprocess.run(["touch", "/etc/wpa_supplicant/wpa_supplicant.conf"])
-subprocess.run(["cp", "/etc/wpa_supplicant/wpa_supplicant.conf", "/etc/wpa_supplicant/wpa_supplicant.conf"])
-subprocess.run(["cp", "/etc/network/interfaces", "/etc/network/interfaces"])
+subprocess.run(["sudo","touch", "/etc/wpa_supplicant/wpa_supplicant.conf"])
+subprocess.run(["sudo", "cp", "/etc/wpa_supplicant/wpa_supplicant.conf", "/etc/wpa_supplicant/wpa_supplicant.bak"])
+subprocess.run(["sudo", "cp", "/etc/network/interfaces", "/etc/network/interfaces.bak"])
 
 with open("/etc/wpa_supplicant/wpa_supplicant.conf","a") as f:
 
