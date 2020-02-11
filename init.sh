@@ -17,7 +17,6 @@ echo '}' | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
 
 sudo touch /etc/network/interfaces 
 sudo cp /etc/network/interfaces /etc/network/interfaces.bak
-echo 'source-directory /etc/network/interfaces.d' | sudo tee -a /etc/network/interfaces
 echo 'auto wlan0' | sudo tee -a /etc/network/interfaces
 echo 'allow-hotplug wlan0' | sudo tee -a /etc/network/interfaces
 echo 'iface wlan0 inet manual' | sudo tee -a /etc/network/interfaces
