@@ -1,6 +1,6 @@
 # ip_emailer
 to connect to eduroam:
-1. run init.sh as root
+1. run sudo init.sh
 2. edit /etc/wpa_supplicant/wpa_supplicant.conf with your username and password
 
 **WARNING: init.sh appends to files, so running it more than once will result in duplicate entries.**
