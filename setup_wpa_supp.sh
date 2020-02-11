@@ -3,6 +3,7 @@
 ##need to add a check for ssid="eduroam" so that this can berun a million times without issue
 ##this will be changed to python3 in the ideal future
 ##python 3 will handle the password input with stdiomask
+sudo touch /etc/wpa_supplicant/wpa_supplicant.conf
 sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.bak
 echo "network={" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
 echo "        ssid=\"eduroam\"" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
